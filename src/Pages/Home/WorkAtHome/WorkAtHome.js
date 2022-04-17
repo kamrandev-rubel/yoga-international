@@ -14,13 +14,13 @@ const WorkAtHome = () => {
                 </div>
                 <div className='flex justify-center items-center'>
                     <div className='w-[555px]'>
-                        <p>Customize your membership and grow your practice by choosing from our expansive library of classes, courses, and articles.</p>
+                        <p className='text-lg text-[#112734B2] p-3 text-left'>Customize your membership and grow your practice by choosing from our expansive library of classes, courses, and articles.</p>
                         <div className='bg-white rounded-2xl'>
                             <div>
                                 <iframe className='rounded-t-2xl w-full' height="315" src="https://www.youtube-nocookie.com/embed/wz5UT2VA3V8?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
-                            <div className='flex justify-between w-[555px]'>
-                                <div className='m-3'>
+                            <div className='flex justify-between w-[] m-3 box-border'>
+                                <div className=''>
                                     <div className='flex items-center mb-3'>
                                         <GiMeditation className='w-11 h-11 bg-[#F1D44B] text-white p-1.5 rounded-full mr-3' />
                                         <h2 className='text-[#112734] text-4xl'>Hatha yoga</h2>
@@ -31,10 +31,10 @@ const WorkAtHome = () => {
                                         <p className='text-[#112734B2] text-lg ml-3'>Noah Maze </p>
                                     </div>
                                 </div>
-                                <div>
+                                <div className='flex flex-col justify-between'>
                                     <h3 className='text-[#112734B2] text-lg font-[700]'>Level 2</h3>
-                                    <div className='flex items-center'>
-                                        <AiOutlineClockCircle className='bg-[#F1D44B] w-9 h-9 p-1 text-white rounded-full' />
+                                    <div className='flex items-center mb-6'>
+                                        <AiOutlineClockCircle className='bg-[#F1D44B] w-9 h-9 p-1 text-white rounded-full mr-4' />
                                         <p className='text-[#112734B2] text-lg font-[]Open_Sans'>45 min </p>
                                     </div>
                                 </div>
