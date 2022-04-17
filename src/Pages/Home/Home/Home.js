@@ -5,7 +5,7 @@ import Benifits from '../Benifits/Benifits';
 const Home = () => {
     return (
         <div>
-            <Banner /> <br />
+            <Banner />
             <Benifits/>
         </div>
     );
