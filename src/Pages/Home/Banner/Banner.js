@@ -11,7 +11,7 @@ const Banner = () => {
             className='w-[100%] bg-[length:100%_340px] h-[340px] lg:bg-[length:100%_100vh] lg:h-[100vh] md:bg-[length:100%_430px] md:h-[430px] bg-no-repeat'
         >
             <div className='md:w-10/12 w-11/12 lg:w-10/12 xl:w-10/12 mx-auto flex justify-center lg:items-center '>
-                <div className='gap-5 mt-14 md:mt-28 lg:mt-36  grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2'>
+                <div className='gap-5 mt-14 md:mt-28 lg:mt-52  grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2'>
                     <div className='p-3 px-0 md:p-3 text-center lg:text-left '>
                         <h1 className='lg:leading-10 md:leading-10'>
                             <span className='text-[#112734] text-[7vw] lg:text-[5vw] md:text-[5vw]'>Practice </span>

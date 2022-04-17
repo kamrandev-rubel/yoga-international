@@ -9,10 +9,12 @@ const Benifits = () => {
             <h2 className='text-[7vw] my-16'>Member <span className='text-[#375B26]'>Benifits</span></h2>
             <div className='grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3'>
                 <div className='bg-white p-3 rounded-md'>
-                    <img src={ teacherImg1} alt="" className='w-full' />
-                    <h2 className='text-[#B6990F] text-[36px]'>World Class Teacher</h2>
-                    <p className='text-[#112734B2] text-[18px]'>Experience the depth of knowledge
-                        from experts across all areas of yoga.</p>
+                        <img src={teacherImg1} alt="" className='w-full' />
+                    <div className='px-2'>
+                        <h2 className='text-[#B6990F] text-[36px]'>World Class Teacher</h2>
+                        <p className='text-[#112734B2] text-[18px]'>Experience the depth of knowledge
+                            from experts across all areas of yoga.</p>
+                    </div>
                 </div>
                 <div className='bg-white p-3 rounded-md'>
                     <img src={ teacherImg2} alt="" className='w-full' />
