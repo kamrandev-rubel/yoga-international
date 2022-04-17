@@ -5,7 +5,7 @@ import { BiSearch } from 'react-icons/bi'
 
 const Header = () => {
     return (
-        <nav class="bg-gray-300 flex items-center mt-6 h-[50px] border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
+        <nav class="bg-transparent relative pt-6 z-20 flex items-center  h-[50px] border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
             <div class="container flex flex-wrap justify-between items-center mx-auto">
                 <Link to='/' className="flex items-center">
                     <img src={logo} className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
