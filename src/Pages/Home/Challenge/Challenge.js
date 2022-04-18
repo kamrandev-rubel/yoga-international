@@ -12,9 +12,15 @@ const Challenge = () => {
                     <p className='text-[#112734B2] text-lg'>Take your practice to the next level with our on-going yoga challenges</p>
                 </div>
             </div>
-            <div className='flex flex-col justify-center md:flex-row lg:flex-row xl:flex-row'>
-                <img src={challengeImg1} alt="" className='mr-8' />
-                <img src={challengeImg2} alt="" className='ml-0' />
+            <div className='grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2'>
+                <div>
+                <img src={challengeImg1} alt="" className='mx-auto' />
+
+                </div>
+                <div>
+
+                <img src={challengeImg2} alt="" className='mx-auto'/>
+                </div>
             </div>
         </div>
     );

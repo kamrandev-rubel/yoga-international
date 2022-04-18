@@ -22,37 +22,23 @@
     },
     {
         "id": "625ce200d82bb9d42842a7f6",
-        "title": "Lorem sitamet consectetur",
+        "title": "Yoga for Neck & Shoulder Relief",
         "price": "$217.85",
         "img": "https://i.ibb.co/brGh8g1/courses3.png",
         "duration": 39
     },
     {
         "id": "625ce200a48f8afcb1471886",
-        "title": "Lorem sitamet consectetur",
+        "title": "Lower Body AMRAP",
         "price": "$146.16",
         "img": "https://i.ibb.co/tsVXtkk/courses5.png",
         "duration": 45
     },
     {
         "id": "625ce200ffac61c3511e86a7",
-        "title": "Lorem sitamet consectetur",
+        "title": "Real Time Coaching",
         "price": "$208.72",
         "img": "https://i.ibb.co/Q8BY7SY/courses6.png",
         "duration": 54
-    },
-    {
-        "id": "625ce200f64e04412693284e",
-        "title": "Lorem sitamet consectetur",
-        "price": "$175.64",
-        "img": "https://i.ibb.co/ynqKxVZ/courses7.png",
-        "duration": 60
-    },
-    {
-        "id": "625ce200dadacd411dd7dde5",
-        "title": "Lorem sitamet consectetur",
-        "price": "$126.68",
-        "img": "https://i.ibb.co/brGh8g1/courses3.png",
-        "duration": 50
     }
 ]
