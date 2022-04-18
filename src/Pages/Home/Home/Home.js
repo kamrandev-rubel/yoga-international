@@ -1,6 +1,7 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
 import Benifits from '../Benifits/Benifits';
+import Challenge from '../Challenge/Challenge';
 import WorkAtHome from '../WorkAtHome/WorkAtHome';
 
 const Home = () => {
@@ -8,7 +9,8 @@ const Home = () => {
         <div>
             <Banner />
             <Benifits />
-            <WorkAtHome/>
+            <WorkAtHome />
+            <Challenge />
         </div>
     );
 };

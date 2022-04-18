@@ -6,18 +6,18 @@ import { AiOutlineClockCircle } from 'react-icons/ai'
 
 const WorkAtHome = () => {
     return (
-        <div className='container mx-auto'>
+        <div className='container mx-auto mb-16'>
             <h2 className='text-[#112734] text-[5vw] leading-[68px] my-24'>At Home Or  On-The-Go <br /> <span className='text-[#375B26]'>Always On Your Time</span></h2>
-            <div className='grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2'>
-                <div>
-                    <img src={workImg} alt="" />
+            <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2'>
+                <div className='flex justify-center md:justify-start'>
+                    <img src={workImg} alt="" className='' />
                 </div>
                 <div className='flex justify-center items-center'>
                     <div className='w-[555px]'>
-                        <p className='text-lg text-[#112734B2] p-3 text-left'>Customize your membership and grow your practice by choosing from our expansive library of classes, courses, and articles.</p>
+                        <p className='text-lg text-[#112734B2] p-3 pt-0 text-left'>Customize your membership and grow your practice by choosing from our expansive library of classes, courses, and articles.</p>
                         <div className='bg-white rounded-2xl'>
                             <div>
-                                <iframe className='rounded-t-2xl w-full' height="315" src="https://www.youtube-nocookie.com/embed/wz5UT2VA3V8?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe className='rounded-t-2xl w-full h-[297px]' src="https://www.youtube-nocookie.com/embed/wz5UT2VA3V8?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                             <div className='flex justify-between w-[] m-3 box-border'>
                                 <div className=''>
