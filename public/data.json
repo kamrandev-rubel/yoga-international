@@ -1,44 +1,141 @@
+
+https://i.ibb.co/gVsk8JQ/stefan-stefancik-QXev-Dflbl8-A-unsplash.jpg
+https://i.ibb.co/wWqvNrT/prince-akachi-J1-OScm-u-HUQ-unsplash.jpg
+https://i.ibb.co/DVMnVBW/oladimeji-odunsi-a-U-e-Ocel-Lh-Q-unsplash.jpg
+https://i.ibb.co/f09Zdvd/nico-marks-25g-Ag2-MOXx-Q-unsplash.jpg
+https://i.ibb.co/M14tBJT/michael-dam-m-EZ3-Po-FGs-k-unsplash.jpg
+https://i.ibb.co/9vt2Dsf/matheus-ferrero-W7b3e-DUb-2-I-unsplash.jpg
+https://i.ibb.co/M1HzdTq/jurica-koletic-7-YVZYZe-ITc8-unsplash.jpg
+https://i.ibb.co/n1K3rgk/Ellipse-9.png
+https://i.ibb.co/QHHRzXz/Ellipse-8.png
+https://i.ibb.co/qW9mY5F/Ellipse-7.png
+https://i.ibb.co/cDBGPJ8/Ellipse-6.png
+https://i.ibb.co/23vK6xg/ayo-ogunseinde-6-W4-F62s-N-y-I-unsplash.jpg
+https://i.ibb.co/tz4CV5Z/andrew-stapleton-4-ZKn-URW703-E-unsplash.jpg
+https://i.ibb.co/5BDpcsr/ali-morshedlou-WMD64t-Mfc4k-unsplash.jpg
+https://i.ibb.co/WGCh5DD/alexandru-zdrobau-BGz8v-O3p-K8k-unsplash.jpg
+https://i.ibb.co/6Yf57Rw/albert-dera-ILip77-Sbm-OE-unsplash.jpg
+https://i.ibb.co/hHVddZx/aiony-haust-3-TLl-97-HNJo-unsplash.jpg
+
 [
     {
         "id": "625ce200077b8ae565079bc7",
         "title": "7 days of Relation ",
         "price": "$195.02",
         "img": "https://i.ibb.co/FYbW62x/courses1.png",
-        "duration": 40
+        "duration": 40,
+        "category": "service"
     },
     {
         "id": "625ce200f1dd54d379696d27",
         "title": "Increase your mobility ",
         "price": "$199.23",
         "img": "https://i.ibb.co/4Fnt0vv/courses9.png",
-        "duration": 50
+        "duration": 50,
+        "category": "service"
     },
     {
         "id": "625ce20087b2755a4b2df139",
         "title": "Let`s begin some Yin",
         "price": "$206.13",
         "img": "https://i.ibb.co/TKGNDhR/courses8.png",
-        "duration": 35
+        "duration": 35,
+        "category": "service"
     },
     {
         "id": "625ce200d82bb9d42842a7f6",
         "title": "Yoga for Neck & Shoulder Relief",
         "price": "$217.85",
         "img": "https://i.ibb.co/brGh8g1/courses3.png",
-        "duration": 39
+        "duration": 39,
+        "category": "service"
     },
     {
         "id": "625ce200a48f8afcb1471886",
         "title": "Lower Body AMRAP",
         "price": "$146.16",
         "img": "https://i.ibb.co/tsVXtkk/courses5.png",
-        "duration": 45
+        "duration": 45,
+        "category": "service"
     },
     {
         "id": "625ce200ffac61c3511e86a7",
         "title": "Real Time Coaching",
         "price": "$208.72",
         "img": "https://i.ibb.co/Q8BY7SY/courses6.png",
-        "duration": 54
-    }
+        "duration": 54,
+        "category": "service"
+    },
+    {
+        "img":"",
+        "category": "expert"
+    },
+    {
+        "img":"",
+        "category": "expert"
+    },
+    {
+        "img":"",
+        "category": "expert"
+    },
+    {
+        "img":"",
+        "category": "expert"
+    },
+    {
+        "img":"",
+        "category": "expert"
+    },
+    {
+        "img":"",
+        "category": "expert"
+    },
+    {
+        "img":"",
+        "category": "expert"
+    },
+    {
+        "img":"",
+        "category": "expert"
+    },
+    {
+        "img":"",
+        "category": "expert"
+    },
+    {
+        "img":"",
+        "category": "expert"
+    },
+    {
+        "img":"",
+        "category": "expert"
+    },
+    {
+        "img":"",
+        "category": "expert"
+    },
+    {
+        "img":"",
+        "category": "expert"
+    },
+    {
+        "img":"",
+        "category": "expert"
+    },
+    {
+        "img":"",
+        "category": "expert"
+    },
+    {
+        "img":"",
+        "category": "expert"
+    },
+    {
+        "img":"",
+        "category": "expert"
+    },
+    {
+        "img":"",
+        "category": "expert"
+    },
 ]
