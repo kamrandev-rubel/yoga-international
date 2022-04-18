@@ -17,7 +17,7 @@ const WorkAtHome = () => {
                         <p className='text-lg text-[#112734B2] p-3 pt-0 text-left'>Customize your membership and grow your practice by choosing from our expansive library of classes, courses, and articles.</p>
                         <div className='bg-white rounded-2xl'>
                             <div>
-                                <iframe className='rounded-t-2xl w-full h-[297px]' src="https://www.youtube-nocookie.com/embed/wz5UT2VA3V8?controls=0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                            <iframe  className='rounded-t-2xl w-full h-[297px]' src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fhistorytv18ind%2Fvideos%2F2123485067685795%2F&show_text=false&width=560&t=0" style={{border:"none", overflow:"hidden"}} scrolling="no" frameBorder="0" allowFullScreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
                             </div>
                             <div className='flex justify-between w-[] m-3 box-border'>
                                 <div className=''>

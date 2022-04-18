@@ -25,7 +25,7 @@ const Course = ({ course }) => {
             </div>
             <div className="flex justify-between items-center text-white">
               <div>
-		    <Link to='/signin' className=" py-1.5 px-4 text-[14px] font-bold text-white bg-[#D3B10F] rounded-md md:hidden lg:block xl:block">Purchase</Link>
+		    <Link to='/signin' className=" py-1.5 px-4 text-[14px] font-bold text-white bg-[#D3B10F] rounded-md">Purchase</Link>
               </div>
               <div className="flex items-center">
                 <AiOutlineClockCircle className="text-4xl mr-2"/>
