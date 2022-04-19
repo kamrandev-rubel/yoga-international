@@ -2,8 +2,8 @@ import React from 'react';
 
 const Checkout = () => {
     return (
-        <div className="py-6 mt-20 flex justify-center items-center  bg-gradient-to-l from-[#f0f0f0] to-slate-300">
-          <div className=" w-[90%] md:w-[75%] lg:w-[60%]">
+        <div className="py-6 mt-20 flex justify-center items-center min-h-[100vh]   bg-slate-300">
+          <div className=" w-[80%] md:w-[65%] lg:w-[40%]">
             <div>
               <h2 className="text-[#v112734] text-4xl font-[800] text-center mb-1">
                 Your <span className="text-[#375B26]">Information</span>
@@ -69,14 +69,30 @@ const Checkout = () => {
                       type="text"
                       className="w-full h-10 rounded-lg outline-none px-3 "
                       name=""
-                      id="password"
+                      id="address"
                       required
                       placeholder="Enter Address"
                     />
+                  </div>
+                  <div className="text-left mb-10">
+                    <label
+                      htmlFor="date"
+                      className="block text-[#50544A] text-md mb-2 ml-1"
+                    >
+                      Date
+                    </label>
+                    <input
+                      type="date"
+                      className="w-full h-10 rounded-lg outline-none px-3 "
+                      name=""
+                      id="date"
+                      required
+                      placeholder="Enter Date"
+                    />
+                  </div>
                     <button className="text-white w-56 h-10 bg-[#89B758] hover:bg-[#3d7922] rounded-[83px] mt-10 text-lg mx-auto block">
                       Checkout
                     </button>
-                  </div>
                 </form>
                   
               </div>
