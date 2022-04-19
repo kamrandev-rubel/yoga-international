@@ -1,9 +1,27 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import {FcGoogle} from 'react-icons/fc';
 import { Link } from 'react-router-dom';
+import auth from '../../../firebase.init';
 import logo from '../../../images/logo.png';
 
 const SignIn = () => {
+  const emailRef = useRef('');
+  const passwordRef = useRef('');
+
+  const [
+    signInWithEmailAndPassword,
+    user,
+    loading,
+    error,
+  ] = useSignInWithEmailAndPassword(auth);
+
+  const handleSigninUser = (e)=>{
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
+
+    signInWithEmailAndPassword(email, password)
+  }
     return (
       <div className="grid grid-cols-1 md:grid-cols-2  min-h-[100vh] mt-20">
         <div className=" bg-gradient-to-r from-[#f0f0f0] to-slate-300 flex justify-center items-center">
@@ -34,6 +52,7 @@ const SignIn = () => {
                       Email
                     </label>
                     <input
+                     ref={emailRef}
                       type="email"
                       className="w-full h-10 rounded-lg outline-none px-3"
                       name=""
@@ -50,6 +69,7 @@ const SignIn = () => {
                       Password
                     </label>
                     <input
+                      ref={passwordRef}
                       type="password"
                       className="w-full h-10 rounded-lg outline-none px-3 "
                       name=""
