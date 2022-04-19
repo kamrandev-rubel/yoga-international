@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/pagination";
-import { Pagination, Navigation, Autoplay } from "swiper";
+import { Pagination, Navigation, Autoplay, FreeMode } from "swiper";
+import useServiceData from '../../../Hooks/useServiceData';
 
 const Experts = () => {
+    const [services, setServices]= useServiceData();
+    const [experts, setExperts] = useState([]);
+    const expertData = services.filter(expert => expert.category === 'expert')
+    useEffect(()=>{
+        setExperts(expertData)
+      },[services])
+
     return (
       <div>
         <h2 className="text-[#112734] text-[5vw]">
@@ -17,31 +25,44 @@ const Experts = () => {
           <Swiper
             slidesPerView={3}
             spaceBetween={30}
-            breakpoints={{
-                640: {
-                  slidesPerView: 2,
-                  spaceBetween: 20,
-                },
-                768: {
-                  slidesPerView: 4,
-                  spaceBetween: 40,
-                },
-                1024: {
-                  slidesPerView: 5,
-                  spaceBetween: 50,
-                },
-              }}
-            autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-              }}
+            // breakpoints={{
+            //     640: {
+            //       slidesPerView: 2,
+            //       spaceBetween: 20,
+            //     },
+            //     768: {
+            //       slidesPerView: 4,
+            //       spaceBetween: 40,
+            //     },
+            //     1024: {
+            //       slidesPerView: 5,
+            //       spaceBetween: 50,
+            //     },
+            //   }}
+            // autoplay={{
+            //     delay: 2500,
+            //     disableOnInteraction: false,
+            //   }}
             pagination={{
               clickable: true,
             }}
-            modules={[Pagination, Autoplay]}
+            modules={[FreeMode, Pagination]}
             className="mySwiper"
           >
-            <SwiperSlide>Slide 1</SwiperSlide>
+              {
+                  experts.map(expert => {
+                      const {img} = expert;
+                    //   console.log(expert);
+                      return (
+                          
+                              <SwiperSlide key={expert.id}> 
+                                <img src={img} alt="" className='w-5/12' />
+                              </SwiperSlide>
+                          
+                      )
+                  })
+              }
+{/*             
             <SwiperSlide>Slide 2</SwiperSlide>
             <SwiperSlide>Slide 3</SwiperSlide>
             <SwiperSlide>Slide 4</SwiperSlide>
@@ -49,7 +70,7 @@ const Experts = () => {
             <SwiperSlide>Slide 6</SwiperSlide>
             <SwiperSlide>Slide 7</SwiperSlide>
             <SwiperSlide>Slide 8</SwiperSlide>
-            <SwiperSlide>Slide 9</SwiperSlide>
+            <SwiperSlide>Slide 9</SwiperSlide> */}
           </Swiper>
         </div>
       </div>
