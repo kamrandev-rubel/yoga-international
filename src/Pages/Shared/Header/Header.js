@@ -3,9 +3,13 @@ import { Link } from 'react-router-dom';
 import logo from '../../../images/logo.png';
 import { BiMenu, BiSearch } from 'react-icons/bi'
 import {MdClose}from 'react-icons/md'
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
+import { signOut } from 'firebase/auth';
 
 const Header = () => {
     const [open, setOpen] = useState(false)
+    const [user] = useAuthState(auth);
     return (
         <div className='bg-gray-900 absolute w-full bg-opacity-0 top-0 z-10'>
 
@@ -23,16 +27,16 @@ const Header = () => {
                 <div className=" w-full md:block md:w-auto">
                     <ul className={`flex left-0 flex-col w-full duration-700 ease-in-out bg-[#f1f1f1] items-center mt-4 md:flex-row md:space-x-9 md:mt-0 absolute md:static md:bg-opacity-0 ${open?'top-[-400px] ':'top-[60px] '}`}>
                         <li>
-                            <Link to="#" className="block py-2 text-[14px] font-[700] font-['Open_Sans']">Home</Link>
+                            <Link to="/" className="block py-2 text-[14px] font-[700] font-['Open_Sans']">Home</Link>
                         </li>
                         <li>
-                            <Link to="#" className="block py-2 text-[14px] font-[700] font-['Open_Sans']">Articles</Link>
+                            <Link to="/courses" className="block py-2 text-[14px] font-[700] font-['Open_Sans']">Courses</Link>
                         </li>
                         <li>
-                            <Link to="#" className="block py-2 text-[14px] font-[700] font-['Open_Sans']">Courses</Link>
+                            <Link to="/blogs" className="block py-2 text-[14px] font-[700] font-['Open_Sans']">Blogs</Link>
                         </li>
                         <li>
-                            <Link to="#" className="block py-2 text-[14px] font-[700] font-['Open_Sans']">About</Link>
+                            <Link to="about" className="block py-2 text-[14px] font-[700] font-['Open_Sans']">About</Link>
                         </li>
                         <div className=' md:hidden lg:hidden xl:hidden'>
                             <ul className='flex flex-col items-center space-y-3 mb-5'>
@@ -55,7 +59,12 @@ const Header = () => {
                                 <BiSearch className=' w-6 h-6 cursor-pointer' />
                             </li>
                             <li>
-                                <Link to='/signin' className="py-1 px-3 text-[14px] font-bold text-[#112734] border border-[#112734] rounded-md">Sign In</Link>
+                                {
+                                    user?
+                                    <Link onClick={()=>signOut(auth)} to='/signin' className="py-1 px-3 text-[14px] font-bold text-[#112734] border border-[#112734] rounded-md">Sign Out</Link>
+                                    :
+                                    <Link to='/signin' className="py-1 px-3 text-[14px] font-bold text-[#112734] border border-[#112734] rounded-md">Sign In</Link>
+                                }
                             </li>
                             <li>
                                 <Link to='/signin' className=" py-1 px-3 text-[14px] font-bold text-white bg-[#D3B10F] rounded-md md:hidden lg:block xl:block">Start your  free trial</Link>

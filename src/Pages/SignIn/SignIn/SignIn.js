@@ -17,6 +17,7 @@ const SignIn = () => {
   ] = useSignInWithEmailAndPassword(auth);
 
   const handleSigninUser = (e)=>{
+    e.preventDefault()
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
 
@@ -43,7 +44,7 @@ const SignIn = () => {
                 <Link to='/signup'>Sign up for account </Link>
               </div>
               <div>
-                <form>
+                <form onSubmit={handleSigninUser}>
                   <div className="text-left mb-5">
                     <label
                       htmlFor="email"
