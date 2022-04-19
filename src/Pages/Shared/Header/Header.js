@@ -1,23 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../images/logo.png';
-import { BiSearch } from 'react-icons/bi'
+import { BiMenu, BiSearch } from 'react-icons/bi'
+import {MdClose}from 'react-icons/md'
 
 const Header = () => {
+    const [open, setOpen] = useState(false)
     return (
         <div className='bg-gray-900 absolute w-full bg-opacity-0 top-0 z-10'>
 
-        <nav className=" pt-6 flex items-center  h-[50px] border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
+        <nav className=" py-9 flex items-center  h-[50px] border-gray-200 px-2 sm:px-4 rounded dark:bg-gray-800">
             <div className="container flex flex-wrap justify-between items-center mx-auto">
                 <Link to='/' className="flex items-center">
                     <img src={logo} className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
                     <span className="self-center text-xl font-semibold whitespace-nowrap text-[18px]"> <span className='text-[#375B26]'>Yoga</span> International </span>
                 </Link>
-                <button data-collapse-toggle="mobile-menu" type="button" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu" aria-expanded="false">
-                    {/* icon toggle */}
+                <button onClick={()=>setOpen(!open)} type="button" className="inline-flex items-center p-1.5 ml-3 text-2xl text-gray-500 rounded-lg md:hidden bg-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+                    {
+                        open ? <MdClose/> : <BiMenu/>
+                    }
                 </button>
-                <div className="hidden w-full md:block md:w-auto" id="mobile-menu">
-                    <ul className="flex flex-col items-center mt-4 md:flex-row md:space-x-9 md:mt-0 ">
+                <div className=" w-full md:block md:w-auto">
+                    <ul className={`flex flex-col items-center mt-4 md:flex-row md:space-x-9 md:mt-0 ${open? 'block':'hidden'}`}>
                         <li>
                             <Link to="#" className="block py-2 text-[14px] font-[700] font-['Open_Sans']">Home</Link>
                         </li>
@@ -25,7 +29,7 @@ const Header = () => {
                             <Link to="#" className="block py-2 text-[14px] font-[700] font-['Open_Sans']">Articles</Link>
                         </li>
                         <li>
-                            <Link to="#" className="block py-2 text-[14px] font-[700] font-['open_sans'] ">classNamees</Link>
+                            <Link to="#" className="block py-2 text-[14px] font-[700] font-['open_sans'] ">ok</Link>
                         </li>
                         <li>
                             <Link to="#" className="block py-2 text-[14px] font-[700] font-['Open_Sans']">Courses</Link>

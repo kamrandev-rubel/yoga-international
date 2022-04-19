@@ -6,7 +6,6 @@ const Courses = () => {
     const [services, setServices] = useServiceData()
     const [courses, setCourses] = useState([])
     const coursesData = services.filter(course => course.category === 'course')
-    console.log(coursesData);
     useEffect(()=>{
       setCourses(coursesData)
     },[services])
