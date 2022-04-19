@@ -3,6 +3,7 @@ import Banner from '../Banner/Banner';
 import Benifits from '../Benifits/Benifits';
 import Challenge from '../Challenge/Challenge';
 import Courses from '../Courses/Courses';
+import Experts from '../Experts/Experts';
 import Member from '../Member/Member';
 import WorkAtHome from '../WorkAtHome/WorkAtHome';
 
@@ -14,6 +15,7 @@ const Home = () => {
             <WorkAtHome />
             <Challenge />
             <Courses />
+            <Experts/>
             <Member/>
         </div>
     );

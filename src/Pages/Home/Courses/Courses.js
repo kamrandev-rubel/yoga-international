@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import useServiceData from '../../../Hooks/useServiceData';
 import Course from '../Course/Course';
 
 const Courses = () => {
-    const [courses, setCourses] = useState([]);
-
-    useEffect(() => {
-        fetch('data.json')
-            .then(res => res.json())
-            .then(data => setCourses(data))
-    }, [])
+    const [services, setServices] = useServiceData()
+    const [courses, setCourses] = useState([])
+    const coursesData = services.filter(course => course.category === 'course')
+    console.log(coursesData);
+    useEffect(()=>{
+      setCourses(coursesData)
+    },[services])
     return (
       <div className="container mx-auto mt-16">
         <div className="mb-16">
@@ -18,9 +19,7 @@ const Courses = () => {
           </p>
         </div>
         <div className="grid gap-8 mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-          {courses.map((course) => (
-            <Course key={course.id} course={course} />
-          ))}
+          {courses.map((course) => <Course key={course.id} course={course} />)}
         </div>
       </div>
     );
