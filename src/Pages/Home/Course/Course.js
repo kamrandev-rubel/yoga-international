@@ -8,9 +8,9 @@ const Course = ({ course }) => {
   return (
     <div className="flex justify-center  relative">
       <div className="">
-        <img src={img} alt="" className="w-[300] md:w-[360px] h-[410px] brightness-[.5] rounded-lg " />
+        <img src={img} alt="" className="w-[330] sm:w-[360px] h-[410px] brightness-[.5] rounded-lg " />
         <div className="absolute top-0 text-center">
-          <div className="flex flex-col justify-around w-[360px] h-[410px] lg:w-[320px] xl:w-[360px] p-3">
+          <div className="flex flex-col justify-around w-[330px] sm:w-[360px] h-[410px] lg:w-[320px] xl:w-[360px] p-3">
             <div className="flex items-center justify-start text-white">
               <p>
                 <IoIosDoneAll className="text-5xl" />{" "}

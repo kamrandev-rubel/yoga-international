@@ -13,7 +13,7 @@ const Member = () => {
                 </div>
             </div>
             <div>
-                <img src={memberImg} alt="" />
+                <img src={memberImg} alt="" className='w-full' />
             </div>
         </div>
     );
