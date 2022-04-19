@@ -1,9 +1,30 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import {FcGoogle} from 'react-icons/fc';
 import { Link } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
 import logo from '../../../images/logo.png';
 
 const SignUp = () => {
+  const nameRef = useRef('');
+  const emailRef = useRef('');
+  const passwordRef = useRef('');
+
+  const [
+    createUserWithEmailAndPassword,
+    user,
+    loading,
+    error,
+  ] = useCreateUserWithEmailAndPassword(auth);
+
+  const handleCreateUser = (e)=>{
+    e.preventDefault();
+    const name = nameRef.current.value;
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
+
+    createUserWithEmailAndPassword(email, password)
+  }
     return (
         <div className="grid grid-cols-1 md:grid-cols-2  min-h-100vh mt-20">
         <div className=" bg-gradient-to-r from-[#f0f0f0] to-slate-300 flex justify-center items-center">
@@ -25,7 +46,7 @@ const SignUp = () => {
                     <Link to='/signin' className='text-[#375B26]  text-md '>Sign In</Link>
                 </p>
               <div>
-                <form>
+                <form onSubmit={handleCreateUser}>
                   <div className="text-left mb-5">
                     <label
                       htmlFor="name"
@@ -34,6 +55,7 @@ const SignUp = () => {
                       Name
                     </label>
                     <input
+                      ref={nameRef}
                       type="text"
                       className="w-full h-10 rounded-lg outline-none px-3"
                       name=""
@@ -50,6 +72,7 @@ const SignUp = () => {
                       Email
                     </label>
                     <input
+                      ref={emailRef}
                       type="email"
                       className="w-full h-10 rounded-lg outline-none px-3"
                       name=""
@@ -66,6 +89,7 @@ const SignUp = () => {
                       Password
                     </label>
                     <input
+                      ref={passwordRef}
                       type="password"
                       className="w-full h-10 rounded-lg outline-none px-3 "
                       name=""

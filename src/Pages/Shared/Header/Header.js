@@ -21,7 +21,7 @@ const Header = () => {
                     }
                 </button>
                 <div className=" w-full md:block md:w-auto">
-                    <ul className={`flex left-0 flex-col w-full md:bg-opacity-0 bg-gradient-to-t duration-700 ease-in-out from-[#f1f1f1] to-gray-200 items-center mt-4 md:flex-row md:space-x-9 md:mt-0 absolute md:static ${open?'top-[-400px] ':'top-[60px] '}`}>
+                    <ul className={`flex left-0 flex-col w-full duration-700 ease-in-out bg-[#f1f1f1] items-center mt-4 md:flex-row md:space-x-9 md:mt-0 absolute md:static md:bg-opacity-0 ${open?'top-[-400px] ':'top-[60px] '}`}>
                         <li>
                             <Link to="#" className="block py-2 text-[14px] font-[700] font-['Open_Sans']">Home</Link>
                         </li>
