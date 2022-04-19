@@ -17,19 +17,16 @@ const Header = () => {
                 </Link>
                 <button onClick={()=>setOpen(!open)} type="button" className="inline-flex items-center p-1.5 ml-3 text-2xl text-gray-500 rounded-lg md:hidden bg-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
                     {
-                        open ? <MdClose/> : <BiMenu/>
+                        open ? <BiMenu/> : <MdClose/>  
                     }
                 </button>
                 <div className=" w-full md:block md:w-auto">
-                    <ul className={`flex flex-col items-center mt-4 md:flex-row md:space-x-9 md:mt-0 ${open? 'block':'hidden'}`}>
+                    <ul className={`flex left-0 flex-col w-full md:bg-opacity-0 bg-[#D8DCE5] items-center mt-4 md:flex-row md:space-x-9 md:mt-0 absolute md:static ${open?'top-[-400px] ':'top-[60px] '}`}>
                         <li>
                             <Link to="#" className="block py-2 text-[14px] font-[700] font-['Open_Sans']">Home</Link>
                         </li>
                         <li>
                             <Link to="#" className="block py-2 text-[14px] font-[700] font-['Open_Sans']">Articles</Link>
-                        </li>
-                        <li>
-                            <Link to="#" className="block py-2 text-[14px] font-[700] font-['open_sans'] ">ok</Link>
                         </li>
                         <li>
                             <Link to="#" className="block py-2 text-[14px] font-[700] font-['Open_Sans']">Courses</Link>
@@ -38,7 +35,7 @@ const Header = () => {
                             <Link to="#" className="block py-2 text-[14px] font-[700] font-['Open_Sans']">About</Link>
                         </li>
                         <div className=' md:hidden lg:hidden xl:hidden'>
-                            <ul className='flex'>
+                            <ul className='flex flex-col items-center space-y-3 mb-5'>
                                 <li>
                                     <BiSearch className=' w-6 h-6 cursor-pointer' />
                                 </li>
