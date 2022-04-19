@@ -5,7 +5,7 @@ import {FaTwitter,FaPinterestP,FaFacebookF} from 'react-icons/fa'
 
 const Footer = () => {
     return (
-        <div className='bg-black py-[70px] mt-14'>
+        <div className='bg-black py-[70px]'>
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 mx-auto'>
                     <div className='flex  justify-center text-lg'>
                         <div className='w-64  flex flex-col text-center md:text-left text-gray-100'>
@@ -41,10 +41,10 @@ const Footer = () => {
                     <p className='text-gray-400'><small>Copyright &copy; {new Date().getFullYear()} online food</small></p>
                 </div>
                 <div className='text-gray-100 text-lg flex mt-[80px] justify-center'>
-                    <AiFillInstagram className='bg-[#F1D44B] w-9 h-9 ml-8 p-1.5 rounded-full text-gray-900 '/>
-                    <FaTwitter className='bg-[#F1D44B] w-9 h-9 ml-8 p-1.5 rounded-full text-gray-900 '/>
-                    <FaPinterestP className='bg-[#F1D44B] w-9 h-9 ml-8 p-1.5 rounded-full text-gray-900 '/>
-                    <FaFacebookF className='bg-[#F1D44B] w-9 h-9 ml-8 p-1.5 rounded-full text-gray-900 '/>
+                    <AiFillInstagram className='bg-[#F1D44B] w-9 h-9 ml-8 p-1.5 rounded-full text-gray-900 cursor-pointer'/>
+                    <FaTwitter className='bg-[#F1D44B] w-9 h-9 ml-8 p-1.5 rounded-full text-gray-900 cursor-pointer'/>
+                    <FaPinterestP className='bg-[#F1D44B] w-9 h-9 ml-8 p-1.5 rounded-full text-gray-900 cursor-pointer'/>
+                    <FaFacebookF className='bg-[#F1D44B] w-9 h-9 ml-8 p-1.5 rounded-full text-gray-900 cursor-pointer'/>
                 </div>
             </div>
         </div>

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import {FcGoogle} from 'react-icons/fc';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
@@ -6,6 +6,7 @@ import auth from '../../../firebase.init';
 import logo from '../../../images/logo.png';
 
 const SignUp = () => {
+  const [agree, setAgree] = useState(false)
   const nameRef = useRef('');
   const emailRef = useRef('');
   const passwordRef = useRef('');
@@ -22,7 +23,7 @@ const SignUp = () => {
 
 
   if (user) {
-    navigate('/signin')
+    navigate('/')
   }
   if (googleUser) {
     navigate('/')
@@ -109,22 +110,46 @@ const SignUp = () => {
                       required
                       placeholder="Enter Password"
                     />
-                    <button className="text-white w-56 h-10 bg-[#89B758] hover:bg-[#3d7922] rounded-[83px] mt-10 text-lg mx-auto block">
-                      Sign In
-                    </button>
                   </div>
+                  <div className="text-left mb-10 flex items-center justify-center">
+                    <input
+                      onClick={()=> setAgree(!agree)}
+                      type="checkbox"
+                      className='h-7'
+                      name=""
+                      id="checkbox"
+                      required
+                    />
+                    <label
+                      htmlFor="checkbox"
+                      className={`text-[#50544A] text-md ml-2 ${agree ? 'text-[#50544A]':'text-red-500'}`}
+                    >
+                      I agree to{" "}
+                      <span className="text-[#89B758]">Platforms Terms</span> of
+                      Service and{" "}
+                      <span className="text-[#89B758]">Privacy Policy </span>
+                    </label>
+                  </div>
+                  <button
+                  // disabled={!agree} 
+                  className="text-white w-56 h-10 bg-[#89B758] hover:bg-[#3d7922] rounded-[83px] mt-10 text-lg mx-auto block">
+                    Sign In
+                  </button>
                 </form>
-                  <div>
-                    <div className="flex justify-center items-center mb-7">
-                      <div className="w-44 bg-[#B8C9A6] h-[2px]"></div>
-                      <p className="text-[14px] text-[#354126] mx-5 ">or</p>
-                      <div className="w-44 bg-[#B8C9A6] h-[2px]"></div>
-                    </div>
-                    <button onClick={() => signInWithGoogle()} className="outline-none text-[#7B6B6B] h-10 rounded-lg shadow-lg bg-white w-full text-lg flex justify-center items-center hover:bg-slate-50">
-                      <FcGoogle className="w-7 h-7 mr-3" />
-                      <p>Sign in With Google</p>
-                    </button>
+                <div>
+                  <div className="flex justify-center items-center mb-7">
+                    <div className="w-44 bg-[#B8C9A6] h-[2px]"></div>
+                    <p className="text-[14px] text-[#354126] mx-5 ">or</p>
+                    <div className="w-44 bg-[#B8C9A6] h-[2px]"></div>
                   </div>
+                  <button
+                    onClick={() => signInWithGoogle()}
+                    className="outline-none text-[#7B6B6B] h-10 rounded-lg shadow-lg bg-white w-full text-lg flex justify-center items-center hover:bg-slate-50"
+                  >
+                    <FcGoogle className="w-7 h-7 mr-3" />
+                    <p>Sign in With Google</p>
+                  </button>
+                </div>
               </div>
             </div>
           </div>

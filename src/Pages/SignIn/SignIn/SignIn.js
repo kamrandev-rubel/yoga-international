@@ -43,7 +43,7 @@ const SignIn = () => {
           </h2>
         </div>
       </div>
-      <div className="flex justify-center items-center  bg-gradient-to-l from-[#f0f0f0] to-slate-300">
+      <div className="flex justify-center items-center  bg-gradient-to-l pb-12 pt-12 from-[#f0f0f0] to-slate-300">
         <div className=" w-[90%] md:w-[75%] lg:w-[60%]">
           <div>
             <h2 className="text-[#v112734] text-4xl font-[800] text-left mb-1">
@@ -88,10 +88,25 @@ const SignIn = () => {
                     required
                     placeholder="Enter Password"
                   />
+                </div>
+                <div className="text-left mb-10 flex items-center justify-center">
+                  <input
+                    type="checkbox"
+                    className=" h-7"
+                    name=""
+                    id="checkbox"
+                    required
+                  />
+                  <label
+                    htmlFor="checkbox"
+                    className=" text-[#50544A] text-md ml-2"
+                  >
+                    I agree to <span className='text-[#89B758]'>Platforms Terms</span> of Service and <span className='text-[#89B758]'>Privacy Policy </span>
+                  </label>
+                </div>
                   <button className="text-white w-56 h-10 bg-[#89B758] hover:bg-[#3d7922] rounded-[83px] mt-10 text-lg mx-auto block">
                     Sign In
                   </button>
-                </div>
               </form>
               <div>
                 <div className="flex justify-center items-center mb-7">
