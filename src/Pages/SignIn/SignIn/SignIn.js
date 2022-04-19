@@ -1,21 +1,32 @@
 import React, { useRef } from 'react';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import {FcGoogle} from 'react-icons/fc';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import logo from '../../../images/logo.png';
 
 const SignIn = () => {
   const emailRef = useRef('');
   const passwordRef = useRef('');
+  const navigate = useNavigate();
+  let location = useLocation();
 
+  
   const [
     signInWithEmailAndPassword,
     user,
     loading,
-    error,
+    error,             
   ] = useSignInWithEmailAndPassword(auth);
-
+  const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
+  
+  let from = location.state?.from?.pathname || "/";
+  if (user) {
+    navigate(from, { replace: true })
+  }
+  if (googleUser) {
+    navigate(from, { replace: true })
+  }
   const handleSigninUser = (e)=>{
     e.preventDefault()
     const email = emailRef.current.value;
@@ -41,7 +52,7 @@ const SignIn = () => {
               </h2>
               <div className="text-[#375B26] text-md flex justify-between mb-6">
                 <p>Can’t sign in?</p>
-                <Link to='/signup'>Sign up for account </Link>
+                <Link to="/signup">Sign up for account </Link>
               </div>
               <div>
                 <form onSubmit={handleSigninUser}>
@@ -53,7 +64,7 @@ const SignIn = () => {
                       Email
                     </label>
                     <input
-                     ref={emailRef}
+                      ref={emailRef}
                       type="email"
                       className="w-full h-10 rounded-lg outline-none px-3"
                       name=""
@@ -78,22 +89,26 @@ const SignIn = () => {
                       required
                       placeholder="Enter Password"
                     />
+                    <button className="text-white w-56 h-10 bg-[#89B758] hover:bg-[#3d7922] rounded-[83px] mt-10 text-lg mx-auto block">
+                      Sign In
+                    </button>
                   </div>
+                </form>
+                <div>
                   <div className="flex justify-center items-center mb-7">
                     <div className="w-44 bg-[#B8C9A6] h-[2px]"></div>
                     <p className="text-[14px] text-[#354126] mx-5 ">or</p>
                     <div className="w-44 bg-[#B8C9A6] h-[2px]"></div>
                   </div>
-                  <div>
-                    <button className="outline-none text-[#7B6B6B] h-10 rounded-lg shadow-lg bg-white w-full text-lg flex justify-center items-center hover:bg-slate-50">
-                      <FcGoogle className="w-7 h-7 mr-3" />
-                      <p>Sign in With Google</p>
-                    </button>
-                    <button className="text-white w-56 h-10 bg-[#89B758] hover:bg-[#3d7922] rounded-[83px] mt-10 text-lg">
-                      Sign In
-                    </button>
-                  </div>
-                </form>
+                  <button
+                    onClick={() => signInWithGoogle()}
+                    className="outline-none text-[#7B6B6B] h-10 rounded-lg shadow-lg bg-white w-full text-lg flex justify-center items-center hover:bg-slate-50 "
+                  >
+                    <FcGoogle className="w-7 h-7 mr-3" />
+                    <p>Sign in With Google</p>
+                  </button>
+                  
+                </div>
               </div>
             </div>
           </div>
