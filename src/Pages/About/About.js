@@ -4,7 +4,7 @@ import aboutImg from '../../images/about.png'
 
 const About = () => {
     return (
-        <div style={{ backgroundImage: `url('${aboutImg}')` }} className='w-[100%] bg-[length:100%_540px] h-[540px] lg:bg-[length:100%_675px] lg:h-[675px] md:bg-[length:100%_630px] md:h-[630px] bg-no-repeat'>
+        <div style={{ backgroundImage: `url('${aboutImg}')` }} className='w-[100%] bg-[length:100%_540px] h-[540px] lg:bg-[length:100%_675px] lg:h-[675px] md:bg-[length:100%_630px] md:h-[630px] bg-no-repeat mt-20'>
             <div className='md:w-10/12 w-11/12 lg:w-10/12 xl:w-10/12 mx-auto flex justify-center lg:items-center '>
                 <div className='gap-5 mt-14 md:mt-28 lg:mt-52  grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2'>
                     <div className='p-3 order-2 lg:order-1 px-0 md:p-3 text-center lg:text-left '>

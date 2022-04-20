@@ -21,14 +21,14 @@ const SignUp = () => {
 
   const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
 
-  useEffect(()=>{
+
     if (user) {
       navigate('/')
     }
     if (googleUser) {
       navigate('/')
     }
-  },[])
+
 
   const handleCreateUser = (e)=>{
     e.preventDefault();
@@ -133,7 +133,7 @@ const SignUp = () => {
                     </label>
                   </div>
                   <button
-                  // disabled={!agree} 
+                  type='submit'
                   className="text-white w-56 h-10 bg-[#89B758] hover:bg-[#3d7922] rounded-[83px] mt-10 text-lg mx-auto block">
                     Sign In
                   </button>

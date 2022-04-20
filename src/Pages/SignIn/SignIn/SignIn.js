@@ -19,14 +19,11 @@ const SignIn = () => {
 
   let from = location?.state?.from?.pathname || "/";
 
-  useEffect(()=>{
+
     if (user) {
       navigate(from, { replace: true })
     }
-    if (googleUser) {
-      navigate(from, { replace: true })
-    }
-  },[])
+
   const handleSigninUser = (e) => {
     e.preventDefault();
     const email = emailRef.current.value;
@@ -109,7 +106,7 @@ const SignIn = () => {
                       <span className="text-[#89B758]"> Privacy Policy </span>
                     </label> 
                 </div>
-                  <button className="text-white w-56 h-10 bg-[#89B758] hover:bg-[#3d7922] rounded-[83px] mt-10 text-lg mx-auto block">
+                  <button type='submit' className="text-white w-56 h-10 bg-[#89B758] hover:bg-[#3d7922] rounded-[83px] mt-10 text-lg mx-auto block">
                     Sign In
                   </button>
               </form>

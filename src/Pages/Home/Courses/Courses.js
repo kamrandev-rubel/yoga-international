@@ -7,7 +7,7 @@ const Courses = () => {
     const [courses, setCourses] = useState([])
     const coursesData = services.filter(course => course.category === 'course')
     useEffect(()=>{
-      setCourses(coursesData)
+      setCourses(coursesData);
     },[services])
     return (
       <div className="container mx-auto mt-16">
