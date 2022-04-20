@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import {FcGoogle} from 'react-icons/fc';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -6,6 +6,7 @@ import auth from '../../../firebase.init';
 import logo from '../../../images/logo.png';
 
 const SignIn = () => {
+  const [agree, setAgree] = useState(false)
   const emailRef = useRef("");
   const passwordRef = useRef("");
   const navigate = useNavigate();
@@ -89,8 +90,9 @@ const SignIn = () => {
                     placeholder="Enter Password"
                   />
                 </div>
-                <div className="text-left mb-10 flex items-center justify-center">
+                <div className="text-left mb-1 flex items-center justify-center">
                   <input
+                    onClick={()=>setAgree(!agree)}
                     type="checkbox"
                     className=" h-7"
                     name=""
@@ -98,11 +100,14 @@ const SignIn = () => {
                     required
                   />
                   <label
-                    htmlFor="checkbox"
-                    className=" text-[#50544A] text-md ml-2"
-                  >
-                    I agree to <span className='text-[#89B758]'>Platforms Terms</span> of Service and <span className='text-[#89B758]'>Privacy Policy </span>
-                  </label>
+                      htmlFor="checkbox"
+                      className={`text-[#50544A] text-md ml-2 ${agree ? 'text-[#50544A]':'text-red-500'}`}
+                    >
+                      I agree to 
+                      <span className="text-[#89B758]"> Platforms Terms </span> of
+                      Service and  
+                      <span className="text-[#89B758]"> Privacy Policy </span>
+                    </label> 
                 </div>
                   <button className="text-white w-56 h-10 bg-[#89B758] hover:bg-[#3d7922] rounded-[83px] mt-10 text-lg mx-auto block">
                     Sign In

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {FcGoogle} from 'react-icons/fc';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
@@ -21,13 +21,15 @@ const SignUp = () => {
 
   const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
 
+  useEffect(()=>{
+    if (user) {
+      navigate('/')
+    }
+    if (googleUser) {
+      navigate('/')
+    }
+  },[])
 
-  if (user) {
-    navigate('/')
-  }
-  if (googleUser) {
-    navigate('/')
-  }
   const handleCreateUser = (e)=>{
     e.preventDefault();
     const name = nameRef.current.value;
@@ -124,10 +126,10 @@ const SignUp = () => {
                       htmlFor="checkbox"
                       className={`text-[#50544A] text-md ml-2 ${agree ? 'text-[#50544A]':'text-red-500'}`}
                     >
-                      I agree to{" "}
-                      <span className="text-[#89B758]">Platforms Terms</span> of
-                      Service and{" "}
-                      <span className="text-[#89B758]">Privacy Policy </span>
+                      I agree to
+                      <span className="text-[#89B758]"> Platforms Terms </span> of
+                      Service and
+                      <span className="text-[#89B758]"> Privacy Policy </span>
                     </label>
                   </div>
                   <button
