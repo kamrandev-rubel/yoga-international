@@ -57,7 +57,7 @@ const SignIn = () => {
           </h2>
         </div>
       </div>
-      <div className="flex justify-center items-center  bg-gradient-to-l pb-12 pt-12 from-[#f0f0f0] to-slate-300">
+      <div className="flex justify-center items-center  bg-gradient-to-l pb-20 pt-12 from-[#f0f0f0] to-slate-300">
         <div className=" w-[90%] md:w-[75%] lg:w-[60%]">
           <div>
             <h2 className="text-[#v112734] text-4xl font-[800] text-left mb-1">

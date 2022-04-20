@@ -44,7 +44,12 @@ const Header = () => {
                                     <BiSearch className=' w-6 h-6 cursor-pointer' />
                                 </li>
                                 <li>
+                                {
+                                    user?
+                                    <Link onClick={()=>signOut(auth)} to='/signin' className="py-1 px-3 text-[14px] font-bold text-[#112734] border border-[#112734] rounded-md">Sign Out</Link>
+                                    :
                                     <Link to='/signin' className="py-1 px-3 text-[14px] font-bold text-[#112734] border border-[#112734] rounded-md">Sign In</Link>
+                                }
                                 </li>
                                 <li>
                                     <Link to='/signin' className=" py-1 px-3 text-[14px] font-bold text-white bg-[#D3B10F] rounded-md md:hidden lg:block xl:block">Start your  free trial</Link>
