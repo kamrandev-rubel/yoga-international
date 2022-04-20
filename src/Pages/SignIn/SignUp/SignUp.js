@@ -4,6 +4,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import logo from '../../../images/logo.png';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SignUp = () => {
   const [agree, setAgree] = useState(false)
@@ -24,6 +26,7 @@ const SignUp = () => {
 
     if (user) {
       navigate('/')
+      toast('Send Your Email Verification')
     }
     if (googleUser) {
       navigate('/')
@@ -37,6 +40,7 @@ const SignUp = () => {
     const password = passwordRef.current.value;
 
     createUserWithEmailAndPassword(email, password)
+    
   }
     return (
       <div className="grid grid-cols-1 md:grid-cols-2  min-h-100vh mt-20">
@@ -156,6 +160,7 @@ const SignUp = () => {
             </div>
           </div>
         </div>
+        <ToastContainer />
       </div>
     );
 };

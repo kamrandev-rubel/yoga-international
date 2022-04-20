@@ -36,7 +36,17 @@ const SignIn = () => {
     signInWithEmailAndPassword(email, password);
   };
 
- 
+  const handleResetPassword =async () => {
+
+    const email = emailRef.current.value;
+    if (email) {
+      await sendPasswordResetEmail(email);
+      toast('Send Your Email')
+    }else{
+      alert('Please enter your email')
+    }
+    
+  }
   return (
     <div className="grid grid-cols-1 md:grid-cols-2  min-h-[100vh] mt-20">
       <div className=" bg-gradient-to-r from-[#f0f0f0] to-slate-300 flex justify-center items-center">
