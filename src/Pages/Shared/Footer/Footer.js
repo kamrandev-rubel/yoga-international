@@ -38,7 +38,7 @@ const Footer = () => {
             </div>
             <div className='w-[90%] mx-auto flex justify-between flex-col md:flex-row'>
                 <div className='mt-[100px]'>
-                    <p className='text-gray-400'><small>Copyright &copy; {new Date().getFullYear()} online food</small></p>
+                    <p className='text-gray-400'><small>Copyright &copy; {new Date().getFullYear()} Yoga International</small></p>
                 </div>
                 <div className='text-gray-100 text-lg flex mt-[80px] justify-center'>
                     <AiFillInstagram className='bg-[#F1D44B] w-9 h-9 ml-8 p-1.5 rounded-full text-gray-900 cursor-pointer'/>

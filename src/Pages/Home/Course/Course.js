@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Course = ({ course }) => {
   const { title, price, img, duration } = course;
   return (
-    <div className="flex justify-center  relative">
+    <div className="flex justify-center  relative mb-5">
       <div className="">
         <img src={img} alt="" className="w-[330] sm:w-[360px] h-[410px] brightness-[.5] rounded-lg " />
         <div className="absolute top-0 text-center">

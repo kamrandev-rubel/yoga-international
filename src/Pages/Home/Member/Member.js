@@ -4,7 +4,7 @@ import memberImg from '../../../images/Rectangle 4.png'
 
 const Member = () => {
     return (
-        <div className='mt-16 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2'>
+        <div className='mt-16 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 mb-10'>
             <div className='flex justify-center items-center'>
                 <div>
                 <h2 className='text-[5vw]'><span  className='text-[#375B26]'>Empowerment</span> <br /> comes from within</h2>

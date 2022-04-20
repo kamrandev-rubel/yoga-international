@@ -4,6 +4,9 @@ import {FcGoogle} from 'react-icons/fc';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import logo from '../../../images/logo.png';
+import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SignIn = () => {
   const [agree, setAgree] = useState(false)
@@ -16,6 +19,7 @@ const SignIn = () => {
     useSignInWithEmailAndPassword(auth);
   const [signInWithGoogle, googleUser, googleLoading, googleError] =
     useSignInWithGoogle(auth);
+    const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth)
 
   let from = location?.state?.from?.pathname || "/";
 
@@ -31,6 +35,8 @@ const SignIn = () => {
 
     signInWithEmailAndPassword(email, password);
   };
+
+ 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2  min-h-[100vh] mt-20">
       <div className=" bg-gradient-to-r from-[#f0f0f0] to-slate-300 flex justify-center items-center">
@@ -106,11 +112,15 @@ const SignIn = () => {
                       <span className="text-[#89B758]"> Privacy Policy </span>
                     </label> 
                 </div>
-                  <button type='submit' className="text-white w-56 h-10 bg-[#89B758] hover:bg-[#3d7922] rounded-[83px] mt-10 text-lg mx-auto block">
+                  <button type='submit' className="text-white w-56 h-10 bg-[#89B758] hover:bg-[#3d7922] rounded-[83px] mt-5 text-lg mx-auto block">
                     Sign In
                   </button>
+
               </form>
               <div>
+                <button 
+                onClick={handleResetPassword}
+                className='text-[#3d7922] text-lg block my-4 ml-auto'>Forget Password</button>
                 <div className="flex justify-center items-center mb-7">
                   <div className="w-44 bg-[#B8C9A6] h-[2px]"></div>
                   <p className="text-[14px] text-[#354126] mx-5 ">or</p>
@@ -128,6 +138,7 @@ const SignIn = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
